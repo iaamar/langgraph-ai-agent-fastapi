@@ -33,7 +33,7 @@ with col1:
     if st.button("Submit"):
         if user_query.strip():
             # Connect backend with frontend
-            response = requests.post("/chat_agent", json=user_input)
+            response = requests.post("http://127.0.0.1:8000/chat_agent", json=user_input)
             response_data = response.json()
             st.session_state.response_data = response_data
 
